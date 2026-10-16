@@ -5,7 +5,7 @@ public class Main {
     static void main() {
         String libraryName = "Lilla biblioteket";
         int bookCount = 12;
-        boolean isOpen = true;
+        boolean isOpen = false;
         int borrowedBookCount = 8;
         IO.println(libraryName);
         IO.println(bookCount);
@@ -18,6 +18,12 @@ public class Main {
         String fullName = firstName + " " + lastName;
         IO.println("Välkommen " + fullName + " till " + libraryName);
 
+        if(isOpen){
+            IO.println("Välkommen in!");
+        }
+        else {
+            IO.println("Biblioteket är stängt");
+        }
 
     }
 }
