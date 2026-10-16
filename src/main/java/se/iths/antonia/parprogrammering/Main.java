@@ -3,13 +3,27 @@ package se.iths.antonia.parprogrammering;
 public class Main {
 
     static void main() {
+        printHeading();
+
+    }
+
+    private static void printHeading() {
         String libraryName = "Lilla biblioteket";
+        IO.println(libraryName);
         int bookCount = 8;
         boolean isOpen = false;
-        int borrowedBookCount = 12;
-        IO.println(libraryName);
         IO.println(bookCount);
         IO.println(isOpen);
+
+        if (isOpen) {
+            IO.println("Välkommen in!");
+        } else {
+            IO.println("Biblioteket är stängt");
+        }
+
+        int borrowedBookCount = 12;
+
+
         int avilableBookCount = bookCount - borrowedBookCount;
         IO.println("antal lediga böcker: " + avilableBookCount);
 
@@ -18,11 +32,6 @@ public class Main {
         String fullName = firstName + " " + lastName;
         IO.println("Välkommen " + fullName + " till " + libraryName);
 
-        if (isOpen) {
-            IO.println("Välkommen in!");
-        } else {
-            IO.println("Biblioteket är stängt");
-        }
 
         if (avilableBookCount == 0) {
             IO.println("Finns inga böcker kvar att låna");
@@ -31,8 +40,9 @@ public class Main {
         } else {
             IO.println("Det finns böcker kvar");
         }
-        for (int i = 1;i<=bookCount;i++){
-            IO.println("book"+i);
+        for (int i = 1; i <= bookCount; i++) {
+            IO.println("book" + i);
         }
+
     }
 }
