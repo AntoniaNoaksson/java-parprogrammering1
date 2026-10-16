@@ -4,7 +4,7 @@ public class Main {
 
     static void main() {
         String libraryName = "Lilla biblioteket";
-        int bookCount = 12;
+        int bookCount = 8;
         boolean isOpen = false;
         int borrowedBookCount = 12;
         IO.println(libraryName);
@@ -31,6 +31,8 @@ public class Main {
         } else {
             IO.println("Det finns böcker kvar");
         }
-
+        for (int i = 1;i<=bookCount;i++){
+            IO.println("book"+i);
+        }
     }
 }
