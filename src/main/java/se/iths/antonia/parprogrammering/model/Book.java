@@ -9,6 +9,11 @@ public class Book {
         this.author = author;
     }
 
+    public Book(){
+        title = "okänd titel";
+        author = "okänd författare";
+    }
+
     public String getTitle() {
         return title;
     }

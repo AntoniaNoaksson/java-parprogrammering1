@@ -13,9 +13,11 @@ public class Main {
 
         Book book1 = new Book("Titel: Hej", "Författare: Lisa");
         Book book2 = new Book("Titel: Hunden Harry", "Författare: Magnus");
+        Book book3 = new Book();
 
         IO.println(book1.getTitle() + " " + book1.getAuthor());
         IO.println(book2.getTitle() + " " + book2.getAuthor());
+        IO.println(book3.getTitle() + ", " + book3.getAuthor());
     }
 
     private static int calculateAvilableBooks(int bookCount, int borrowedBookCount) {
