@@ -10,8 +10,13 @@ public class Main {
         IO.println(libraryName);
         IO.println(bookCount);
         IO.println(isOpen);
-        int  avilableBookCount = bookCount-borrowedBookCount;
-        IO.println("antal lediga böcker: "+avilableBookCount);
+        int avilableBookCount = bookCount - borrowedBookCount;
+        IO.println("antal lediga böcker: " + avilableBookCount);
+
+        String firstName = "Antonia";
+        String lastName = "Noaksson";
+        String fullName = firstName + " " + lastName;
+        IO.println("Välkommen " + fullName + " till " + libraryName);
 
 
     }
