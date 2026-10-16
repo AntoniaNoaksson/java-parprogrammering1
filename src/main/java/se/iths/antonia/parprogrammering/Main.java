@@ -18,6 +18,12 @@ public class Main {
         IO.println(book1.getTitle() + " " + book1.getAuthor());
         IO.println(book2.getTitle() + " " + book2.getAuthor());
         IO.println(book3.getTitle() + ", " + book3.getAuthor());
+
+        IO.println(book1.isBorrowed());
+        book1.setBorrowed();
+        IO.println(book1.isBorrowed());
+        book1.returnBook();
+        IO.println(book1.isBorrowed());
     }
 
     private static int calculateAvilableBooks(int bookCount, int borrowedBookCount) {
