@@ -1,18 +1,25 @@
 package se.iths.antonia.parprogrammering;
 
+import se.iths.antonia.parprogrammering.model.Book;
+
 public class Main {
 
     static void main() {
         printHeading();
-        int avilableBooks = calculateAvilableBooks(12,5);
+        int avilableBooks = calculateAvilableBooks(12, 5);
         IO.println(avilableBooks);
-        avilableBooks = calculateAvilableBooks(20,8);
+        avilableBooks = calculateAvilableBooks(20, 8);
         IO.println(avilableBooks);
 
+        Book book1 = new Book("Titel: Hej", "Författare: Lisa");
+        Book book2 = new Book("Titel: Hunden Harry", "Författare: Magnus");
+
+        IO.println(book1.getTitle() + " " + book1.getAuthor());
+        IO.println(book2.getTitle() + " " + book2.getAuthor());
     }
 
-    private static int calculateAvilableBooks(int bookCount, int borrowedBookCount){
-        return bookCount-borrowedBookCount;
+    private static int calculateAvilableBooks(int bookCount, int borrowedBookCount) {
+        return bookCount - borrowedBookCount;
     }
 
     private static void printHeading() {
