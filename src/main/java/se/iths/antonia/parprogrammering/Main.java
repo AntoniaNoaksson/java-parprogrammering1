@@ -4,7 +4,15 @@ public class Main {
 
     static void main() {
         printHeading();
+        int avilableBooks = calculateAvilableBooks(12,5);
+        IO.println(avilableBooks);
+        avilableBooks = calculateAvilableBooks(20,8);
+        IO.println(avilableBooks);
 
+    }
+
+    private static int calculateAvilableBooks(int bookCount, int borrowedBookCount){
+        return bookCount-borrowedBookCount;
     }
 
     private static void printHeading() {
